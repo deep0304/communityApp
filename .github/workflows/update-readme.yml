@@ -1,0 +1,53 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: "0 * * * *" # Runs every hour
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set image based on time
+        id: set-image
+        run: |
+          HOUR=$(date +"%H")
+          if [ $HOUR -ge 6 ] && [ $HOUR -lt 18 ]; then
+            IMAGE_URL="images/light.png"
+          else
+            IMAGE_URL="images/dark.png"
+          fi
+          echo "::set-output name=image_url::$IMAGE_URL"
+
+      - name: Print image URL
+        run: echo "IMAGE_URL is ${{ steps.set-image.outputs.image_url }}"
+
+      - name: Print README before update
+        run: cat README.md
+
+      - name: Update README
+        run: |
+          sed -i "s|PLACEHOLDER_IMAGE_PATH|${{ steps.set-image.outputs.image_url }}|" README.md
+          cat README.md
+
+      - name: Check for changes
+        run: |
+          git diff --exit-code || echo "Changes detected"
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged # Show changes to be committed
+          git commit -m "Update README with new image"
+          git push
