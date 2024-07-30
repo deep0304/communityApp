@@ -16,7 +16,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ![Image](images/light.png)
 
-![Dynamic Image](images/light.png)
+![Dynamic Image](PLACEHOLDER_IMAGE_PATH)
 
 To contribute,
 
