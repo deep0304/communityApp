@@ -3,6 +3,9 @@
 First, run the development server:
 
 ```bash
+yarn install # to install dependcies
+```
+```bash
 yarn dev
 ```
 
@@ -18,10 +21,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ![Dynamic Image](PLACEHOLDER_IMAGE_PATH)
 
-To contribute,
-
+## To contribute,
+ for this repo
 ```bash
-git add .
-git commit -m "msg"
-git push -u origin main
+git clone https://github.com/path/to/your/repo #not actual command
+
 ```
