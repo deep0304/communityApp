@@ -50,4 +50,5 @@ jobs:
           git add README.md
           git diff --staged # Show changes to be committed
           git commit -m "Update README with new image"
-          git push
+          git pull --rebase origin main
+          git push origin main
