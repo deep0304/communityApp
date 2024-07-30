@@ -16,7 +16,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 # System Design
 
-![Image](PLACEHOLDER_IMAGE_PATH)
+![Image](images/light.png)
 
 To contribute,
 
