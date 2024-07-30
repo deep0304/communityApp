@@ -26,24 +26,25 @@ jobs:
           else
             IMAGE_URL="images/dark.png"
           fi
-          echo "::set-output name=image_url::$IMAGE_URL"
+          echo "image_url=$IMAGE_URL" >> $GITHUB_ENV
 
       - name: Print image URL
-        run: echo "IMAGE_URL is ${{ steps.set-image.outputs.image_url }}"
+        run: echo "IMAGE_URL is ${{ env.image_url }}"
 
       - name: Print README before update
         run: cat README.md
 
       - name: Update README
         run: |
-          sed -i "s|PLACEHOLDER_IMAGE_PATH|${{ steps.set-image.outputs.image_url }}|" README.md
+          sed -i "s|PLACEHOLDER_IMAGE_PATH|${{ env.image_url }}|" README.md
           cat README.md
 
       - name: Check for changes
-        run: |
-          git diff --exit-code || echo "Changes detected"
+        id: git-diff
+        run: git diff --exit-code || echo "Changes detected"
 
       - name: Commit changes
+        if: steps.git-diff.outputs.exit-code != 0
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
