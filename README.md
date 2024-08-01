@@ -4,6 +4,9 @@ First, run the development server:
 
 ```bash
 yarn install # to install dependcies
+yarn add next react react-dom
+yarn add --dev @types/react @types/react-dom
+yarn add --dev typescript @types/react @types/node @types/react-dom
 ```
 
 ```bash
@@ -48,3 +51,7 @@ git push origin main
 6. Add necessary details, comments if any about the pull request.
 
 7. Click on Create PR.
+
+8. For the FrontEnd code you can go to `app/page.tsx` and start the stuff
+
+9. For the BackEnd code just start at `app/api` and start the stuff
