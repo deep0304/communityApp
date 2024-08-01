@@ -20,7 +20,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ![Image](images/light.png)
 
-![Dynamic Image](PLACEHOLDER_IMAGE_PATH)
+![View the Actual Design](https://excalidraw.com/#json=29LoyprJCOF1ARplRHu-m,Wvnq4d274i16MkQKBqe2Eg)
 
 ## To contribute,
 

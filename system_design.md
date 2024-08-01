@@ -1,4 +1,4 @@
-![https://excalidraw.com/#json=rg57_cIBvd3Uj475dkMFc,Br0Kjwae0hGjXJzK-PNXjA](System design link)
+![https://excalidraw.com/#json=29LoyprJCOF1ARplRHu-m,Wvnq4d274i16MkQKBqe2Eg](System design link)
 
 ### SRS Outline for Client-Side Application
 
