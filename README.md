@@ -52,6 +52,23 @@ git push origin main
 
 7. Click on Create PR.
 
-8. For the FrontEnd code you can go to `app/page.tsx` and start the stuff
+8. Getting Started with DataBase->
+   to add Prisma and the Prisma Client
+   `yarn add prisma --dev
+yarn add @prisma/client
+`
+   Initialize Prisma
+   `yarn prisma init`
 
-9. For the BackEnd code just start at `app/api` and start the stuff
+9. Set the DATABASE_URL in the .env file to point to your existing database. If your database has no tables yet, read https://pris.ly/d/getting-started
+   define the schema in `prisma/schema.prisma`
+
+generate the client
+`yarn prisma generate`
+
+run the studio
+`yarn prisma studio`
+
+9. For the FrontEnd code you can go to `app/page.tsx` and start the stuff
+
+10. For the BackEnd code just start at `app/api` and start the stuff
