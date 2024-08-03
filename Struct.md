@@ -36,9 +36,9 @@ Structure of Next.js Repo->
 | |_|_|_ 📄 Sidebar.tsx
 |
 |_|_ 📁 lib -> utility belt(Store helper functions and constants here)
-| |_|**|_ 📄 api.ts
-| |_|**|_ 📄 utils.ts
-| | _|_ 📄 constants.ts
+| |_|_|_ 📄 api.ts
+| |*|*📄 utils.ts
+| | *|*📄 constants.ts
 |
 |_ 📁 hooks -> Create custom hooks to encapsulate complex logic
 | |_ 📄 seUser.ts
@@ -61,12 +61,17 @@ Structure of Next.js Repo->
 | |_ 📁 fonts
 | |_ 📄 custom-font.woff2
 |
+|_ 📁 packages
+|_ |_ 📁 db -> database schema
+|_| _||_ 📄 schema.prisma
+|
+|
 |_ 📁 config
 | |_ 📄 seo.ts
 | |_ 📄 navigation.ts
 |
-|_ 📄 next.config.js
-|_ 📄 package.json
-|_ 📄 tsconfig.json
+|\_ 📄 next.config.js
+|\_ 📄 package.json
+|\_ 📄 tsconfig.json
 |\_ 📄 .env.local
 |\_ 📄 .gitignore
