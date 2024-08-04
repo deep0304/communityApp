@@ -16,7 +16,9 @@ datasource db {
 //user can have multiple families
 // family will have the single family owner
 // user can have multiple session for the sake of multiple device login
-
+// providerId->stores the identifier(google,facebook etc)
+//providertype-> category of authentication providers(OAuth, etc)
+//providerAccountId-> unique identifier for each provider
 
 model User {
     id                  Int         @id @default(autoincrement())
