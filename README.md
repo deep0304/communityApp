@@ -7,6 +7,7 @@ yarn install # to install dependcies
 yarn add next react react-dom
 yarn add --dev @types/react @types/react-dom
 yarn add --dev typescript @types/react @types/node @types/react-dom
+yarn add @next-auth/prisma-adapter
 ```
 
 ```bash
